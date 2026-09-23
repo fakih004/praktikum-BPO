@@ -1,7 +1,7 @@
 Program ini adalah simulasi Sistem manajemen dan layanan rumah sakit berbasis OOP
 sistem ini dirancang untuk mengelola data tenaga medis, pasien dan janji temu di rumah sakit
 
-konsep oop yang diimplementasikan 
+**#konsep oop yang diimplementasikan**
 - class dan object: pembentukan cetakan objek untuk tenaga medis, pasien dan janji temu
 - Encapsulasi: perlindungan data seperti catatan medis pasien (__catatanMedis) dan status janji temu (__status)
 - Getter dan Setter: penggunaan decorator @property untuk memvalidasi dan mengakses perubahan data catatan agar perubahan tidak boleh kosong
@@ -9,14 +9,14 @@ konsep oop yang diimplementasikan
 - static method: untuk memvalidasi status janji temu pasien 
 
 
-1. Class TenagaMedis
+#**1. Class TenagaMedis**
 Digunakan untuk merepresentasikan data tenaga medis yang bertugas di rumah sakit.
 Atribut:
  - nama: nama tenaga medis
  - peran: peran di rumah sakit(contoh: dokter,perawat)
  - spesialis: bidang setiap tenaga medis(contoh: spesialis jantung, UGD)
 
-2. Class Pasien
+#**2. Class Pasien**
 Digunakan untuk mengelola data pasien seperti nama,umur dan catatanMedis
 Atribut
  - nama : Nama pasien
@@ -26,7 +26,7 @@ Method
  - catatanMedis(getter) : mengembalikan nilai catatan medis pasien
  - catatanMedis(setter) : mengubah nilai catatan medis dengan validasi perubahan tidak boleh kosong('len(catatanMedisBaru.strip()==0')
 
-3. Class JanjiTemu 
+**#3. Class JanjiTemu** 
 Digunakan untuk mencatat dan mengelola jadwal janji temu pasien dengan dokter 
 Atribut
  - namaInstansi : nama instansi/rumah sakit
@@ -41,20 +41,43 @@ Method
  - ubahJamOperasional(jamBaru) : mengubah jam operasional
  - validasiStatus(status) : melindungi status janji temu agar tidak diubah sembarangan
 
--PANDUAN PENGUJIAN
+**#PANDUAN PENGUJIAN**
+
 #catatan di objek class janjiTemu yang ke 2 (janji2) ubah pasien1 menjadi pasien2
 
- -Pengujian objek dan atribut
+**#Pengujian objek dan atribut**
+ 
 Di program sudah tersedia 2 objek untuk masing-masing kelas dan sudah ada kode untuk menguji apakah total janji temu akan terhitung, jika output menunjukkan "total janji temu sekarang : 2" maka program berhasil
 
- -Pengujian Getter dan setter
+     print("Nama Instansi : ",JanjiTemu.namaInstansi)
+     print("jam operasional : ",JanjiTemu.jamOprasional)
+     print("total janji temu sekarang : ",JanjiTemu.totalJanjiTemu)
+     print(janji1.lihatStatus())
+
+ **#Pengujian Getter dan setter**
+ 
  Di program juga sudah tersedia kode untuk menguji getter dan setter:
- #getter & setter
-pasien1.catatanMedis = "batuk berdahak" # valid
-pasien1.catatanMedis = "" # gak valid
-print("Catatan:", pasien1.catatanMedis)
-Kasih tanda (#) di salah satu objek yang sudah tersedia dan jalankan programnya
+ 
+     #getter & setter
+     pasien1.catatanMedis = "batuk berdahak" # valid
+     pasien1.catatanMedis = "" # gak valid
+     print("Catatan:", pasien1.catatanMedis)
 
- -pengujian class method dan static method
+Kasih tanda (#) di salah satu objek yang sudah tersedia dan jalankan programnya,
+untuk output valid program akan mengeluarkan output 
+"catatan: batuk berdahak" 
+untuk tidak valid program akan mengekuarkan output "catatan medis tidak boleh kosong" "catatan: demam tinggi sejak kemarin"
 
-
+ **#Pengujian class method dan static method**
+ 
+ Di program sudah tersedia untuk menguji class dan static method yang harus dilakukan hanyalah menghapus tanda (#) dan jalankan program:
+ 
+     #classmethod
+     JanjiTemu.ubahJamOperasional("05.00 - 12.00")
+     print("Jam operasional baru:", JanjiTemu.jamOprasional)
+     
+     #staticmethod
+     status = JanjiTemu.validasiStatus("selesa") <--- ubah jadi "selesai" untuk menjadi valid
+     print("apakah statusnya valid?:", status)
+untuk class method jika outputnya menunjukkan jam "05.00 - 12.00" jam operasional berhasil diubah dan @classmethod berhasil,
+untuk static method jika outputnya "True" maka @staticmethod berhasil
