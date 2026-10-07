@@ -73,28 +73,28 @@ Panduan Pengujian:
        # coba asosiasi
         print("1. Coba asosiasi")
         dokter.periksaPasien(pasien2)
-Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien Dina", maka asosiasi pemanggilan berhasil dijalankan
+Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien Dina", maka asosiasi pemanggilan berhasil dijalankan.
 
 2. Untuk menguji agregasi jalankan kode
         
         # #coba agregasi
         print("2. Coba agredasi")
         print(janji1.lihatStatus())
-Jika outputnya "Status janji temu pasien Andi dengan dr.Badrul: telah dikonfirmasi", maka pemanggilan agregasi berhasil dijalankan
+Jika outputnya "Status janji temu pasien Andi dengan dr.Badrul: telah dikonfirmasi", maka pemanggilan agregasi berhasil dijalankan.
 
 3. Untuk menguji komposisi jalankan kode
    
         # #coba komposisi
         print("3. Coba komposisi")
         print(f"Catatan rekam medis {pasien1.nama}: {pasien1.RekamMedis.diagnosis}")
-Jika outputnya "Catatan rekam medis Andi: demam tinggi sejak kemarin", maka pemanggilan komposisi berhasil dijalankan
+Jika outputnya "Catatan rekam medis Andi: demam tinggi sejak kemarin", maka pemanggilan komposisi berhasil dijalankan.
 
 4. Untuk menguji protected jalankan kode
         
         # coba protacted
         print("5. Coba protected")
         dokter.periksaPasien(pasien1)
-Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien Andi", maka pemanggilan komposisi berhasil dijalankan
+Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien Andi", maka pemanggilan komposisi berhasil dijalankan.
 
 5. Untuk menguji atribut protected dan private jalankan kode
 
@@ -105,5 +105,5 @@ Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien A
 Jika outputnya:
 "ID dr.Badrul : D001
  ID dr.Dodi : D002"
- maka pemanggilan atribut protected dan private berhasil
+ maka pemanggilan atribut protected dan private berhasil.
 
