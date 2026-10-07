@@ -1,6 +1,6 @@
-##Program ini adalah simulasi Sistem manajemen dan layanan rumah sakit berbasis OOP sistem ini dirancang untuk mengelola data tenaga medis, pasien dan janji temu di rumah sakit##
+**Program ini adalah simulasi Sistem manajemen dan layanan rumah sakit berbasis OOP sistem ini dirancang untuk mengelola data tenaga medis, pasien dan janji temu di rumah sakit**
 
-Program ini menerapkan konsep relasi UML yang berupa
+-Program ini menerapkan konsep relasi UML yang berupa
 Asosiasi:
 
     def periksaPasien(self, pasien):
@@ -26,7 +26,7 @@ Komposisi:
             self.RekamMedis = RekamMedis(catatanMedis)
 Objek RekamMedis diciptakan langsung di dalam class pasien.
 
-Program ini juga menerapkan konsep inheritance
+-Program ini juga menerapkan konsep inheritance diantaranya
 Superclass dan Subclass:
 
     #superclass
@@ -67,7 +67,7 @@ Protected dan private:
 
 Atribut nama menjadi protected, dan menambahkan atribut baru bernama idTenagaMedis sebagai private. 
 
-Panduan Pengujian:
+-Panduan Pengujian:
 1. Untuk menguji asosiasi menjalankan kode
 
        # coba asosiasi
@@ -103,7 +103,6 @@ Jika outputnya "Dokter dr.Badrul spesialis pediatri sedang mendiagnosis pasien A
         print(f"ID {dokter._nama} : {dokter.getId()}")  #memanggil id dokter Badrul
         print(f"ID {dokter2._nama} : {dokter2.getId()}") #memanggil id dokter Dodi
 Jika outputnya:
-"ID dr.Badrul : D001
- ID dr.Dodi : D002"
+"ID dr.Badrul : D001" dan "ID dr.Dodi : D002"
  maka pemanggilan atribut protected dan private berhasil.
 
