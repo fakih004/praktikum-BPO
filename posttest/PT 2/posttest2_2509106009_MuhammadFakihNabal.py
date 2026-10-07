@@ -12,8 +12,6 @@ class TenagaMedis:
     def periksaPasien(self, pasien):
         print(f"{self._nama} sedang memeriksa {pasien.nama}, pasien dengan diagnosis {pasien.RekamMedis.diagnosis}")
 
-
-
 #subclass
 class Dokter(TenagaMedis):
     def __init__(self, nama, peran,spesialis,idTenagaMedis):
@@ -23,8 +21,6 @@ class Dokter(TenagaMedis):
     #overriding
     def periksaPasien(self, pasien):
         print(f"Dokter {self._nama} spesialis {self.spesialis} sedang mendiagnosis pasien {pasien.nama}")
-
-
 
 class Perawat(TenagaMedis):
     def __init__(self, nama, peran,shift,idTenagaMedis):
@@ -94,25 +90,25 @@ janji1 = JanjiTemu(pasien1,dokter,"23 september 2070", "telah dikonfirmasi")
 janji2 = JanjiTemu(pasien1,dokter,"29 september 2070", "masih dipending")
 
 
-# coba asosiasi
-print("1. Coba asosiasi")
-dokter.periksaPasien(pasien2)
+# # coba asosiasi
+# print("1. Coba asosiasi")
+# dokter.periksaPasien(pasien2)
 
-# #coba agregasi
-print("2. Coba agredasi")
-print(janji1.lihatStatus())
+# # #coba agregasi
+# print("2. Coba agredasi")
+# print(janji1.lihatStatus())
 
-# #coba komposisi
-print("3. Coba komposisi")
-print(f"Catatan rekam medis {pasien1.nama}: {pasien1.RekamMedis.diagnosis}")
+# # #coba komposisi
+# print("3. Coba komposisi")
+# print(f"Catatan rekam medis {pasien1.nama}: {pasien1.RekamMedis.diagnosis}")
 
-# coba overridingg
-print("4. Coba overriding")
-dokter2.periksaPasien(pasien3)
+# # coba overridingg
+# print("4. Coba overriding")
+# dokter2.periksaPasien(pasien3)
 
-# coba protacted
-print("5. Coba protected")
-dokter.periksaPasien(pasien1)
+# # coba protacted
+# print("5. Coba protected")
+# dokter.periksaPasien(pasien1)
 
 # coba private
 print("4. Coba private")
