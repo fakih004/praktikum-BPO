@@ -112,5 +112,5 @@ janji2 = JanjiTemu(pasien1,dokter,"29 september 2070", "masih dipending")
 
 # coba private
 print("4. Coba private")
-print(f"ID dokter {dokter._nama} : {dokter.getId()}")  #memanggil id dokter Badrul
-print(f"ID dokter {dokter2._nama} : {dokter2.getId()}") #memanggil id dokter Dodi
+print(f"ID {dokter._nama} : {dokter.getId()}")  #memanggil id dokter Badrul
+print(f"ID {dokter2._nama} : {dokter2.getId()}") #memanggil id dokter Dodi
