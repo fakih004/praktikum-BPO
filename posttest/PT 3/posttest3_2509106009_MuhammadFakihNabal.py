@@ -149,12 +149,12 @@ janji2 = JanjiTemu(pasien1,dokter,"29 september 2070", "masih dipending")
 # print(f"ID {dokter2._nama} : {dokter2.getId()}") #memanggil id dokter Dodi
 
 # coba abstract
-print("6. Coba abstract")
-try:
-        bluePrint = TenagaMedis("dr. Dahlah", "Perawat", "D004")
-except TypeError as e:
-        print("Gagal membuat objek karena abstrak class")
-        print(f"Errornya: {e}")
+# print("6. Coba abstract")
+# try:
+#         bluePrint = TenagaMedis("dr. Dahlah", "Perawat", "D004")
+# except TypeError as e:
+#         print("Gagal membuat objek karena abstrak class")
+#         print(f"Errornya: {e}")
 
 
 print("7. coba polimorfisme via pewarisan")
@@ -168,7 +168,7 @@ print("8. duck typing")
 JalankanLayanan(Apotek())
 JalankanLayanan(Ambulan())
 
-print("9. coba class method")
+print("9. coba magic method")
 #coba __str__
 print(pasien1)
 #coba __eq__
