@@ -1,4 +1,4 @@
-**Program ini adalah simulasi Sistem manajemen dan layanan rumah sakit berbasis OOP sistem ini dirancang untuk mengelola data tenaga medis, pasien dan janji temu di rumah sakit**
+# **Program ini adalah simulasi Sistem manajemen dan layanan rumah sakit berbasis OOP sistem ini dirancang untuk mengelola data tenaga medis, pasien dan janji temu di rumah sakit**
 
 ![diagram](diagram.png)
 
@@ -28,7 +28,7 @@ Kedua kelas ini berbagi atribut nama, peran, dan idTenagaMedis.
 
 
 
-**# Program ini menerapkan abstraksi dan polimorfisme.**
+# Program ini menerapkan abstraksi dan polimorfisme.
 
 **#Abstraksi**
 
@@ -119,13 +119,14 @@ class TenagaMedis memiliki 2 method (periksaPasein dan daftarTugas) yang di-over
         def periksaPasien(self, pasien):
             print(f"Perawat {self._nama} sedang memeriksa pasien {pasien.nama} di shift {self.shift}")
         
-# memanggil dengan satu loop
-    print("7. coba polimorfisme via pewarisan")
-    pekerjaRS = [dokter,perawat]
-    
-    for pekerja in pekerjaRS:
-        pekerja.daftarTugas()   
-        pekerja.periksaPasien(pasien1)
+- memanggil dengan satu loop
+
+        print("7. coba polimorfisme via pewarisan")
+        pekerjaRS = [dokter,perawat]
+        
+        for pekerja in pekerjaRS:
+            pekerja.daftarTugas()   
+            pekerja.periksaPasien(pasien1)
 
 ![Polimorfisme](polimo.png)
 
